@@ -1,390 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashita B | Applied AI Engineer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashita B | Applied AI Engineer</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        body{
-            background:#f5f7fa;
-            color:#333;
-            line-height:1.6;
-        }
+<style>
 
-        header{
-            background:linear-gradient(135deg,#0f172a,#1e293b);
-            color:white;
-            padding:80px 10%;
-            text-align:center;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
 
-        header h1{
-            font-size:3rem;
-            margin-bottom:10px;
-        }
+body{
+background:#0f172a;
+color:white;
+}
 
-        header h2{
-            color:#60a5fa;
-            font-weight:500;
-            margin-bottom:20px;
-        }
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(15,23,42,0.95);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:center;
+padding:20px;
+z-index:1000;
+}
 
-        header p{
-            max-width:800px;
-            margin:auto;
-            font-size:1.1rem;
-        }
+nav a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-weight:500;
+}
 
-        .btn{
-            display:inline-block;
-            margin-top:25px;
-            padding:12px 24px;
-            background:#3b82f6;
-            color:white;
-            text-decoration:none;
-            border-radius:8px;
-            transition:0.3s;
-        }
+nav a:hover{
+color:#38bdf8;
+}
 
-        .btn:hover{
-            background:#2563eb;
-        }
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
 
-        section{
-            padding:70px 10%;
-        }
+.logo{
+width:150px;
+height:150px;
+border-radius:50%;
+background:linear-gradient(135deg,#38bdf8,#2563eb);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:4rem;
+font-weight:bold;
+margin-bottom:30px;
+box-shadow:0 0 40px rgba(56,189,248,.4);
+}
 
-        .section-title{
-            text-align:center;
-            margin-bottom:40px;
-            color:#0f172a;
-            font-size:2rem;
-        }
+.hero h1{
+font-size:4rem;
+}
 
-        .card-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-            gap:25px;
-        }
+.hero h2{
+color:#38bdf8;
+margin-top:10px;
+font-weight:500;
+}
 
-        .card{
-            background:white;
-            padding:25px;
-            border-radius:15px;
-            box-shadow:0 5px 15px rgba(0,0,0,0.08);
-            transition:0.3s;
-        }
+.hero p{
+max-width:800px;
+margin-top:20px;
+color:#cbd5e1;
+}
 
-        .card:hover{
-            transform:translateY(-5px);
-        }
+.btn{
+margin-top:30px;
+padding:12px 30px;
+border-radius:30px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+font-weight:600;
+}
 
-        .card h3{
-            margin-bottom:15px;
-            color:#1e40af;
-        }
+.section{
+padding:100px 10%;
+}
 
-        .timeline{
-            position:relative;
-            margin-top:20px;
-        }
+.section-title{
+font-size:2.5rem;
+margin-bottom:40px;
+text-align:center;
+}
 
-        .timeline-item{
-            background:white;
-            padding:25px;
-            border-left:4px solid #2563eb;
-            margin-bottom:20px;
-            border-radius:10px;
-            box-shadow:0 5px 15px rgba(0,0,0,0.08);
-        }
+.about{
+text-align:center;
+max-width:900px;
+margin:auto;
+color:#cbd5e1;
+}
 
-        .skills{
-            display:flex;
-            flex-wrap:wrap;
-            gap:12px;
-            justify-content:center;
-        }
+.timeline{
+position:relative;
+max-width:900px;
+margin:auto;
+}
 
-        .skill{
-            background:#dbeafe;
-            color:#1e40af;
-            padding:10px 18px;
-            border-radius:30px;
-            font-weight:600;
-        }
+.timeline-item{
+background:#1e293b;
+padding:25px;
+margin-bottom:25px;
+border-left:4px solid #38bdf8;
+border-radius:10px;
+}
 
-        .contact{
-            text-align:center;
-        }
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
 
-        .contact a{
-            display:inline-block;
-            margin:10px;
-            color:#2563eb;
-            text-decoration:none;
-            font-weight:bold;
-        }
+.project-card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+transition:.3s;
+}
 
-        footer{
-            background:#0f172a;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
+.project-card:hover{
+transform:translateY(-8px);
+}
 
-        .stats{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-            gap:20px;
-            text-align:center;
-        }
+.project-card h3{
+color:#38bdf8;
+margin-bottom:15px;
+}
 
-        .stat-box{
-            background:white;
-            padding:25px;
-            border-radius:12px;
-            box-shadow:0 5px 15px rgba(0,0,0,0.08);
-        }
+.skills{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
 
-        .stat-box h3{
-            color:#2563eb;
-            font-size:2rem;
-        }
-    </style>
+.skill{
+background:#1e293b;
+padding:12px 20px;
+border-radius:30px;
+border:1px solid #38bdf8;
+}
+
+.education{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.edu-card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+color:#38bdf8;
+display:block;
+margin:10px;
+text-decoration:none;
+}
+
+footer{
+padding:30px;
+text-align:center;
+background:#020617;
+margin-top:50px;
+}
+
+.typing{
+color:#38bdf8;
+font-weight:600;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>Ashita B</h1>
-    <h2>Applied AI Engineer</h2>
+<nav>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</nav>
 
-    <p>
-        Generative AI • Agentic AI • RAG Systems • Knowledge Graphs • Machine Learning
-    </p>
+<section class="hero">
 
-    <p style="margin-top:20px;">
-        AI Engineer with experience building enterprise-grade AI solutions including
-        RAG chatbots, Knowledge Graph systems, OCR pipelines, and Agentic Analytics
-        applications using Python, Neo4j, Machine Learning, and modern AI frameworks.
-    </p>
+<div class="logo">
+AB
+</div>
 
-    <a href="Ashita_Resume.pdf" class="btn" target="_blank">
-        Download Resume
-    </a>
-</header>
+<h1>Ashita B</h1>
 
-<section>
-    <h2 class="section-title">Professional Summary</h2>
+<h2 class="typing"></h2>
 
-    <div class="card">
-        <p>
-            Currently working at Tata Elxsi as an Engineer, focusing on Generative AI,
-            Agentic Workflows, Knowledge Graphs, OCR, and Enterprise AI applications.
-            Passionate about designing scalable AI systems that solve real-world
-            business problems through intelligent retrieval, reasoning, and automation.
-        </p>
-    </div>
+<p>
+Applied AI Engineer specializing in Generative AI, RAG Systems,
+Agentic Workflows, Knowledge Graphs and Machine Learning solutions.
+Currently working at Tata Elxsi building enterprise AI applications.
+</p>
+
+<a class="btn" href="https://www.linkedin.com/in/ashita-b-73509b1a7/" target="_blank">
+Connect on LinkedIn
+</a>
+
 </section>
 
-<section>
-    <h2 class="section-title">Experience</h2>
+<section id="about" class="section">
 
-    <div class="timeline">
+<h2 class="section-title">About Me</h2>
 
-        <div class="timeline-item">
-            <h3>Tata Elxsi | Engineer</h3>
-            <p><strong>Oct 2023 – Present</strong></p>
+<div class="about">
+I am an Applied AI Engineer with experience in Generative AI,
+Retrieval Augmented Generation (RAG), Agentic AI Systems,
+Knowledge Graphs, OCR Pipelines and Enterprise AI Solutions.
 
-            <ul style="margin-top:10px;padding-left:20px;">
-                <li>Built Design Assist Chatbot using RAG and Agentic AI.</li>
-                <li>Developed Neo4j Knowledge Graph integration for structured retrieval.</li>
-                <li>Implemented enterprise Guardrails Framework for LLM safety.</li>
-                <li>Created Excel-based Agentic Analytics System.</li>
-                <li>Worked on OCR-based Task Card Recognition for document understanding.</li>
-                <li>Contributed to Bloom Energy enterprise RAG solutions.</li>
-                <li>Working on 2D-to-3D CAD conversion workflows.</li>
-            </ul>
-        </div>
+Alongside my professional work at Tata Elxsi, I am pursuing
+the IIT Madras BS Degree in Data Science and Applications
+and an MBA from IGNOU.
+</div>
 
-    </div>
 </section>
 
-<section>
-    <h2 class="section-title">Featured AI Projects</h2>
+<section id="experience" class="section">
 
-    <div class="card-grid">
+<h2 class="section-title">Experience</h2>
 
-        <div class="card">
-            <h3>Design Assist Chatbot</h3>
-            <p>
-                Enterprise RAG chatbot capable of processing PDF and DOCX documents
-                to provide intelligent architecture-related query resolution.
-            </p>
-            <br>
-            <strong>Tech:</strong>
-            Python, RAG, LLMs, Vector Databases
-        </div>
+<div class="timeline">
 
-        <div class="card">
-            <h3>Knowledge Graph System</h3>
-            <p>
-                Neo4j-powered knowledge graph integrated with chatbot systems
-                to improve retrieval quality and reasoning capabilities.
-            </p>
-            <br>
-            <strong>Tech:</strong>
-            Neo4j, Graph Databases, GenAI
-        </div>
+<div class="timeline-item">
+<h3>Tata Elxsi — Engineer</h3>
+<p>Oct 2023 - Present</p>
+<br>
+<ul>
+<li>Built Design Assist Chatbot using RAG and Agentic AI.</li>
+<li>Developed Neo4j Knowledge Graph integration.</li>
+<li>Implemented Enterprise Guardrails Framework.</li>
+<li>Built Excel-based Agentic Analytics System.</li>
+<li>Worked on OCR-based Document Intelligence solutions.</li>
+<li>Contributed to Bloom Energy Agentic RAG initiatives.</li>
+<li>Working on AI-assisted 2D to 3D CAD conversion.</li>
+</ul>
+</div>
 
-        <div class="card">
-            <h3>Guardrails Framework</h3>
-            <p>
-                Multi-layer framework covering input validation,
-                retrieval validation, and output safety for enterprise LLM systems.
-            </p>
-            <br>
-            <strong>Tech:</strong>
-            Python, LLMs, Prompt Engineering
-        </div>
+</div>
 
-        <div class="card">
-            <h3>Agentic Analytics System</h3>
-            <p>
-                AI-powered spreadsheet analytics platform allowing users
-                to query Excel data using natural language.
-            </p>
-            <br>
-            <strong>Tech:</strong>
-            Python, Pandas, Agentic AI
-        </div>
-
-        <div class="card">
-            <h3>OCR Document Intelligence</h3>
-            <p>
-                Structured information extraction from task cards and
-                engineering documents using OCR and AI models.
-            </p>
-            <br>
-            <strong>Tech:</strong>
-            OCR, Document AI, Machine Learning
-        </div>
-
-        <div class="card">
-            <h3>2D to 3D CAD Conversion</h3>
-            <p>
-                Exploring AI-assisted workflows for converting engineering
-                drawings into editable 3D CAD representations.
-            </p>
-            <br>
-            <strong>Tech:</strong>
-            Computer Vision, CAD Automation, AI
-        </div>
-
-    </div>
 </section>
 
-<section>
-    <h2 class="section-title">Technical Skills</h2>
+<section id="projects" class="section">
 
-    <div class="skills">
-        <span class="skill">Python</span>
-        <span class="skill">SQL</span>
-        <span class="skill">C</span>
-        <span class="skill">C++</span>
-        <span class="skill">Machine Learning</span>
-        <span class="skill">Deep Learning</span>
-        <span class="skill">Generative AI</span>
-        <span class="skill">RAG</span>
-        <span class="skill">Agentic AI</span>
-        <span class="skill">Neo4j</span>
-        <span class="skill">Knowledge Graphs</span>
-        <span class="skill">Vector Databases</span>
-        <span class="skill">OCR</span>
-        <span class="skill">REST APIs</span>
-        <span class="skill">Git</span>
-        <span class="skill">Linux</span>
-        <span class="skill">Pandas</span>
-        <span class="skill">NumPy</span>
-    </div>
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>Design Assist Chatbot</h3>
+<p>Enterprise RAG chatbot for querying architecture and engineering documents.</p>
+</div>
+
+<div class="project-card">
+<h3>Knowledge Graph System</h3>
+<p>Neo4j-based graph reasoning integrated with chatbot workflows.</p>
+</div>
+
+<div class="project-card">
+<h3>Agentic Analytics</h3>
+<p>Natural language analytics over Excel datasets.</p>
+</div>
+
+<div class="project-card">
+<h3>OCR Document Intelligence</h3>
+<p>Structured extraction from engineering task cards and documents.</p>
+</div>
+
+<div class="project-card">
+<h3>Bloom Energy RAG</h3>
+<p>Enterprise retrieval architecture for large-scale document systems.</p>
+</div>
+
+<div class="project-card">
+<h3>2D to 3D CAD Conversion</h3>
+<p>AI-powered workflow for engineering drawing transformation.</p>
+</div>
+
+</div>
+
 </section>
 
-<section>
-    <h2 class="section-title">Education</h2>
+<section id="skills" class="section">
 
-    <div class="card-grid">
+<h2 class="section-title">Skills</h2>
 
-        <div class="card">
-            <h3>BE Computer Science Engineering</h3>
-            <p>SDMCET, Dharwad</p>
-            <p>2019 - 2023</p>
-            <p><strong>CGPA: 9.41</strong></p>
-        </div>
+<div class="skills">
 
-        <div class="card">
-            <h3>BS Degree in Data Science</h3>
-            <p>IIT Madras</p>
-            <p>Dec 2023 - Present</p>
-        </div>
+<div class="skill">Python</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">Deep Learning</div>
+<div class="skill">Generative AI</div>
+<div class="skill">RAG</div>
+<div class="skill">Agentic AI</div>
+<div class="skill">Neo4j</div>
+<div class="skill">Knowledge Graphs</div>
+<div class="skill">OCR</div>
+<div class="skill">SQL</div>
+<div class="skill">Pandas</div>
+<div class="skill">NumPy</div>
+<div class="skill">Git</div>
 
-        <div class="card">
-            <h3>MBA</h3>
-            <p>IGNOU</p>
-            <p>2024 - Present</p>
-        </div>
+</div>
 
-    </div>
 </section>
 
-<section>
-    <h2 class="section-title">Highlights</h2>
+<section id="education" class="section">
 
-    <div class="stats">
+<h2 class="section-title">Education</h2>
 
-        <div class="stat-box">
-            <h3>2+</h3>
-            <p>Years Industry Experience</p>
-        </div>
+<div class="education">
 
-        <div class="stat-box">
-            <h3>5+</h3>
-            <p>Enterprise AI Solutions</p>
-        </div>
+<div class="edu-card">
+<h3>BE Computer Science</h3>
+<p>SDMCET</p>
+<p>CGPA: 9.41</p>
+</div>
 
-        <div class="stat-box">
-            <h3>GenAI</h3>
-            <p>Specialization</p>
-        </div>
+<div class="edu-card">
+<h3>IIT Madras BS</h3>
+<p>Data Science & Applications</p>
+</div>
 
-    </div>
+<div class="edu-card">
+<h3>IGNOU MBA</h3>
+<p>Ongoing</p>
+</div>
+
+</div>
+
 </section>
 
-<section class="contact">
-    <h2 class="section-title">Contact</h2>
+<section id="contact" class="section contact">
 
-    <p>Email: ashitabheemappa@gmail.com</p>
-    <p>Location: Bengaluru, Karnataka</p>
+<h2 class="section-title">Contact</h2>
 
-    <div style="margin-top:20px;">
-        <a href="https://linkedin.com/in/ashita-b" target="_blank">LinkedIn</a>
-        <a href="https://github.com/" target="_blank">GitHub</a>
-    </div>
+<p>Email: ashitabheemappa@gmail.com</p>
+
+<a href="https://www.linkedin.com/in/ashita-b-73509b1a7/" target="_blank">
+LinkedIn Profile
+</a>
+
 </section>
 
 <footer>
-    <p>© 2026 Ashita B | Applied AI Engineer</p>
+© 2026 Ashita B | Applied AI Engineer
 </footer>
 
 <script>
-    console.log("Welcome to Ashita's AI Portfolio");
+
+const words = [
+"Applied AI Engineer",
+"Generative AI Developer",
+"RAG Systems Engineer",
+"Agentic AI Builder"
+];
+
+let i = 0;
+let j = 0;
+let current = "";
+let isDeleting = false;
+
+function type() {
+
+const element = document.querySelector(".typing");
+
+if(i < words.length){
+
+if(!isDeleting && j <= words[i].length){
+current = words[i].substring(0,j++);
+element.innerHTML = current;
+}
+
+if(isDeleting && j >= 0){
+current = words[i].substring(0,j--);
+element.innerHTML = current;
+}
+
+if(j === words[i].length){
+isDeleting = true;
+}
+
+if(isDeleting && j < 0){
+isDeleting = false;
+i++;
+if(i===words.length){
+i=0;
+}
+}
+}
+
+setTimeout(type,100);
+}
+
+type();
+
 </script>
 
 </body>
