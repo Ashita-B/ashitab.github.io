@@ -63,21 +63,27 @@ nav{
 	box-shadow: 3.716px 3.346px 40px 0px rgba(43,43,43,0.1);
 }
 nav ul{
-	padding: 0;
-}
-nav li{
-	float: left;
-	width: 20%;
-	height: 100px;
-	text-align: center;
 	display: flex;
-  	justify-content: center; /*vertical align*/
-  	align-content: center;
-  	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	padding: 0;
+	margin: 0;
 }
+
+nav li{
+	list-style: none;
+	padding: 0 30px;
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+}
+
 nav a{
 	text-decoration: none;
-	color: #000000;
+	color: #000;
 	font-size: 120%;
 }
 nav hr{
