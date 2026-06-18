@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashita B | Applied AI Engineer</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body{
+            background:#f5f7fa;
+            color:#333;
+            line-height:1.6;
+        }
+
+        header{
+            background:linear-gradient(135deg,#0f172a,#1e293b);
+            color:white;
+            padding:80px 10%;
+            text-align:center;
+        }
+
+        header h1{
+            font-size:3rem;
+            margin-bottom:10px;
+        }
+
+        header h2{
+            color:#60a5fa;
+            font-weight:500;
+            margin-bottom:20px;
+        }
+
+        header p{
+            max-width:800px;
+            margin:auto;
+            font-size:1.1rem;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:25px;
+            padding:12px 24px;
+            background:#3b82f6;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#2563eb;
+        }
+
+        section{
+            padding:70px 10%;
+        }
+
+        .section-title{
+            text-align:center;
+            margin-bottom:40px;
+            color:#0f172a;
+            font-size:2rem;
+        }
+
+        .card-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+        }
+
+        .card h3{
+            margin-bottom:15px;
+            color:#1e40af;
+        }
+
+        .timeline{
+            position:relative;
+            margin-top:20px;
+        }
+
+        .timeline-item{
+            background:white;
+            padding:25px;
+            border-left:4px solid #2563eb;
+            margin-bottom:20px;
+            border-radius:10px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .skills{
+            display:flex;
+            flex-wrap:wrap;
+            gap:12px;
+            justify-content:center;
+        }
+
+        .skill{
+            background:#dbeafe;
+            color:#1e40af;
+            padding:10px 18px;
+            border-radius:30px;
+            font-weight:600;
+        }
+
+        .contact{
+            text-align:center;
+        }
+
+        .contact a{
+            display:inline-block;
+            margin:10px;
+            color:#2563eb;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        footer{
+            background:#0f172a;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .stats{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+            gap:20px;
+            text-align:center;
+        }
+
+        .stat-box{
+            background:white;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .stat-box h3{
+            color:#2563eb;
+            font-size:2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ashita B</h1>
+    <h2>Applied AI Engineer</h2>
+
+    <p>
+        Generative AI • Agentic AI • RAG Systems • Knowledge Graphs • Machine Learning
+    </p>
+
+    <p style="margin-top:20px;">
+        AI Engineer with experience building enterprise-grade AI solutions including
+        RAG chatbots, Knowledge Graph systems, OCR pipelines, and Agentic Analytics
+        applications using Python, Neo4j, Machine Learning, and modern AI frameworks.
+    </p>
+
+    <a href="Ashita_Resume.pdf" class="btn" target="_blank">
+        Download Resume
+    </a>
+</header>
+
+<section>
+    <h2 class="section-title">Professional Summary</h2>
+
+    <div class="card">
+        <p>
+            Currently working at Tata Elxsi as an Engineer, focusing on Generative AI,
+            Agentic Workflows, Knowledge Graphs, OCR, and Enterprise AI applications.
+            Passionate about designing scalable AI systems that solve real-world
+            business problems through intelligent retrieval, reasoning, and automation.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>Tata Elxsi | Engineer</h3>
+            <p><strong>Oct 2023 – Present</strong></p>
+
+            <ul style="margin-top:10px;padding-left:20px;">
+                <li>Built Design Assist Chatbot using RAG and Agentic AI.</li>
+                <li>Developed Neo4j Knowledge Graph integration for structured retrieval.</li>
+                <li>Implemented enterprise Guardrails Framework for LLM safety.</li>
+                <li>Created Excel-based Agentic Analytics System.</li>
+                <li>Worked on OCR-based Task Card Recognition for document understanding.</li>
+                <li>Contributed to Bloom Energy enterprise RAG solutions.</li>
+                <li>Working on 2D-to-3D CAD conversion workflows.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Featured AI Projects</h2>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>Design Assist Chatbot</h3>
+            <p>
+                Enterprise RAG chatbot capable of processing PDF and DOCX documents
+                to provide intelligent architecture-related query resolution.
+            </p>
+            <br>
+            <strong>Tech:</strong>
+            Python, RAG, LLMs, Vector Databases
+        </div>
+
+        <div class="card">
+            <h3>Knowledge Graph System</h3>
+            <p>
+                Neo4j-powered knowledge graph integrated with chatbot systems
+                to improve retrieval quality and reasoning capabilities.
+            </p>
+            <br>
+            <strong>Tech:</strong>
+            Neo4j, Graph Databases, GenAI
+        </div>
+
+        <div class="card">
+            <h3>Guardrails Framework</h3>
+            <p>
+                Multi-layer framework covering input validation,
+                retrieval validation, and output safety for enterprise LLM systems.
+            </p>
+            <br>
+            <strong>Tech:</strong>
+            Python, LLMs, Prompt Engineering
+        </div>
+
+        <div class="card">
+            <h3>Agentic Analytics System</h3>
+            <p>
+                AI-powered spreadsheet analytics platform allowing users
+                to query Excel data using natural language.
+            </p>
+            <br>
+            <strong>Tech:</strong>
+            Python, Pandas, Agentic AI
+        </div>
+
+        <div class="card">
+            <h3>OCR Document Intelligence</h3>
+            <p>
+                Structured information extraction from task cards and
+                engineering documents using OCR and AI models.
+            </p>
+            <br>
+            <strong>Tech:</strong>
+            OCR, Document AI, Machine Learning
+        </div>
+
+        <div class="card">
+            <h3>2D to 3D CAD Conversion</h3>
+            <p>
+                Exploring AI-assisted workflows for converting engineering
+                drawings into editable 3D CAD representations.
+            </p>
+            <br>
+            <strong>Tech:</strong>
+            Computer Vision, CAD Automation, AI
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Technical Skills</h2>
+
+    <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">SQL</span>
+        <span class="skill">C</span>
+        <span class="skill">C++</span>
+        <span class="skill">Machine Learning</span>
+        <span class="skill">Deep Learning</span>
+        <span class="skill">Generative AI</span>
+        <span class="skill">RAG</span>
+        <span class="skill">Agentic AI</span>
+        <span class="skill">Neo4j</span>
+        <span class="skill">Knowledge Graphs</span>
+        <span class="skill">Vector Databases</span>
+        <span class="skill">OCR</span>
+        <span class="skill">REST APIs</span>
+        <span class="skill">Git</span>
+        <span class="skill">Linux</span>
+        <span class="skill">Pandas</span>
+        <span class="skill">NumPy</span>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Education</h2>
+
+    <div class="card-grid">
+
+        <div class="card">
+            <h3>BE Computer Science Engineering</h3>
+            <p>SDMCET, Dharwad</p>
+            <p>2019 - 2023</p>
+            <p><strong>CGPA: 9.41</strong></p>
+        </div>
+
+        <div class="card">
+            <h3>BS Degree in Data Science</h3>
+            <p>IIT Madras</p>
+            <p>Dec 2023 - Present</p>
+        </div>
+
+        <div class="card">
+            <h3>MBA</h3>
+            <p>IGNOU</p>
+            <p>2024 - Present</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Highlights</h2>
+
+    <div class="stats">
+
+        <div class="stat-box">
+            <h3>2+</h3>
+            <p>Years Industry Experience</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>5+</h3>
+            <p>Enterprise AI Solutions</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>GenAI</h3>
+            <p>Specialization</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <p>Email: ashitabheemappa@gmail.com</p>
+    <p>Location: Bengaluru, Karnataka</p>
+
+    <div style="margin-top:20px;">
+        <a href="https://linkedin.com/in/ashita-b" target="_blank">LinkedIn</a>
+        <a href="https://github.com/" target="_blank">GitHub</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Ashita B | Applied AI Engineer</p>
+</footer>
+
+<script>
+    console.log("Welcome to Ashita's AI Portfolio");
+</script>
+
+</body>
+</html>
