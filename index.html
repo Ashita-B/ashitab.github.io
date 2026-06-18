@@ -7,247 +7,187 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
+
 <body>
 
-	<nav>
-		<ul>
-			<a href="#home"><li> HOME </li></a>
-    		<a href="#about"><li> ABOUT ME </li></a>
-    		<a href="#skills"><li> SKILLS </li></a>
-		    <a href="#projects"><li> PROJECTS </li></a>
-		    <a href="#contact"><li> CONTACT </li></a>
-		</ul>
-	</nav>
+<nav>
+	<ul>
+		<a href="#home"><li> HOME </li></a>
+		<a href="#about"><li> ABOUT ME </li></a>
+		<a href="#skills"><li> SKILLS </li></a>
+		<a href="#projects"><li> PROJECTS </li></a>
+		<a href="#contact"><li> CONTACT </li></a>
+	</ul>
+</nav>
 
-	<div class="menu-button">
-		<div class="menu-button-line"></div>
-		<div class="menu-button-line"></div>
-		<div class="menu-button-line"></div>
+<div id="home">
+
+	<!-- AB LOGO -->
+	<div style="
+		width:200px;
+		height:200px;
+		border-radius:50%;
+		background:#56b9b8;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		font-size:70px;
+		color:white;
+		margin:auto;
+		font-weight:bold;">
+		AB
 	</div>
 
-	<div class="menu">
-		<div class="cross">
-			<div class="cross-line"></div>
-			<div class="cross-line"></div>
+	<div id="name">Ashita B</div>
+	<span>Applied AI Engineer | GenAI | RAG | Agentic AI</span>
+</div>
+
+<div id="about">
+
+	<div id="about-me">About Me</div>
+
+	<div id="container">
+
+		<div class="tabs activeTab"> ABOUT ME </div>
+		<div class="tabs"> EDUCATION </div>
+
+		<hr>
+
+		<div id="data">
+			<div id="abt">
+
+				I am Ashita B, an Applied AI Engineer working at Tata Elxsi, Bengaluru.<br><br>
+
+				I specialize in Generative AI, RAG systems, Agentic AI workflows, Knowledge Graphs, OCR pipelines and enterprise AI solutions.<br><br>
+
+				Currently pursuing:
+				<br>• IIT Madras BS Degree in Data Science
+				<br>• MBA from IGNOU<br><br>
+
+				I enjoy building real-world AI systems that solve enterprise problems.
+
+			</div>
 		</div>
-		<div class="menu-dropdown">
-			<a href="#home"><div> HOME </div></a>
-    		<a href="#about"><div> ABOUT ME </div></a>
-    		<a href="#skills"><div> SKILLS </div></a>
-		    <a href="#projects"><div> PROJECTS </div></a>
-		    <a href="#contact"><div> CONTACT </div></a>
-		</div>
+
+	</div>
+</div>
+
+<hr id="seperating">
+<hr id="seperating">
+<hr id="seperating">
+
+<div id="skills">
+
+	<div id="skills-heading"> Skills </div>
+
+	<div class="area">
+		<div class="area-head"> AI / ML </div>
+
+		<div class="skill"><p>Machine Learning</p></div>
+		<div class="skill"><p>Deep Learning</p></div>
+		<div class="skill"><p>Generative AI</p></div>
+		<div class="skill"><p>RAG</p></div>
+		<div class="skill"><p>Agentic AI</p></div>
 	</div>
 
-	<!-- HOME -->
-	<div id="home">
+	<div class="area">
+		<div class="area-head"> Programming </div>
 
-		<!-- AB logo instead of image -->
-		<div style="
-			width:180px;
-			height:180px;
-			border-radius:50%;
-			background:#56b9b8;
-			display:flex;
-			align-items:center;
-			justify-content:center;
-			font-size:60px;
-			color:white;
-			margin:auto;
-			font-weight:bold;">
-			AB
-		</div>
-
-		<div id="name">Ashita B</div>
-		<span>Applied AI Engineer | Generative AI | RAG | Agentic AI</span>
+		<div class="skill"><i class="devicon-python-plain icon"></i><p>Python</p></div>
+		<div class="skill"><i class="devicon-c-plain icon"></i><p>C</p></div>
+		<div class="skill"><i class="devicon-cplusplus-plain icon"></i><p>C++</p></div>
+		<div class="skill"><p>SQL</p></div>
 	</div>
 
-	<!-- ABOUT -->
-	<div id="about">
-		<div id="about-me">About Me</div>
+	<div class="area">
+		<div class="area-head"> Tools </div>
 
-		<div id="container">
-			<div class="tabs activeTab"> ABOUT ME </div>
-			<div class="tabs"> EDUCATION </div>
+		<div class="skill"><p>Neo4j</p></div>
+		<div class="skill"><p>OCR</p></div>
+		<div class="skill"><p>Pandas</p></div>
+		<div class="skill"><p>NumPy</p></div>
+		<div class="skill"><p>Git</p></div>
+	</div>
 
-			<hr>
+</div>
 
-			<div id="data">
-				<div id="abt">
+<hr id="seperating">
+<hr id="seperating">
+<hr id="seperating">
 
-					Hello, I am Ashita B, an Applied AI Engineer working at Tata Elxsi, Bengaluru. <br><br>
+<div id="projects">
 
-					I specialize in Generative AI, RAG Systems, Agentic AI workflows, Knowledge Graphs, OCR pipelines and enterprise AI solutions.<br><br>
+	<div id="projects-heading"> Projects </div>
 
-					I am currently pursuing:
-					<br>• IIT Madras BS Degree in Data Science and Applications
-					<br>• MBA from IGNOU
-					<br><br>
+	<div class="projects-row">
 
-					I enjoy building intelligent AI systems that solve real-world enterprise problems.
-
+		<div class="proj-container">
+			<div class="project">
+				<div class="project-image">
+					<img src="images/rag.jpg">
+				</div>
+				<div class="caption">
+					Design Assist Chatbot
+					<div class="description">RAG-based enterprise chatbot for documents.</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<hr id="seperating">
-	<hr id="seperating">
-	<hr id="seperating">
-
-	<!-- SKILLS -->
-	<div id="skills">
-		<div id="skills-heading"> Skills </div>
-
-		<div class="area">
-			<div class="area-head"> Programming </div>
-
-			<div class="skill"><i class="devicon-python-plain icon"></i><p>Python</p></div>
-			<div class="skill"><i class="devicon-c-plain icon"></i><p>C</p></div>
-			<div class="skill"><i class="devicon-cplusplus-plain icon"></i><p>C++</p></div>
-			<div class="skill"><i class="devicon-java-plain icon"></i><p>SQL</p></div>
+		<div class="proj-container">
+			<div class="project">
+				<div class="project-image">
+					<img src="images/graph.jpg">
+				</div>
+				<div class="caption">
+					Knowledge Graph System
+					<div class="description">Neo4j + LLM reasoning system.</div>
+				</div>
+			</div>
 		</div>
 
-		<div class="area">
-			<div class="area-head"> AI / ML </div>
-
-			<div class="skill"><p>Machine Learning</p></div>
-			<div class="skill"><p>Deep Learning</p></div>
-			<div class="skill"><p>Generative AI</p></div>
-			<div class="skill"><p>RAG</p></div>
-			<div class="skill"><p>Agentic AI</p></div>
-		</div>
-
-		<div class="area">
-			<div class="area-head"> Data & Systems </div>
-
-			<div class="skill"><p>Pandas</p></div>
-			<div class="skill"><p>NumPy</p></div>
-			<div class="skill"><p>Neo4j</p></div>
-			<div class="skill"><p>OCR</p></div>
-			<div class="skill"><p>Git</p></div>
-		</div>
-	</div>
-
-	<hr id="seperating">
-	<hr id="seperating">
-	<hr id="seperating">
-
-	<!-- PROJECTS -->
-	<div id="projects">
-
-		<div id="projects-heading"> Projects </div>
-
-		<div class="projects-row">
-
-			<div class="proj-container">
-				<a href="#">
-					<div class="project">
-						<div class="project-image">
-							<img src="images/rag.jpg">
-						</div>
-						<div class="caption">
-							Design Assist Chatbot
-							<div class="description">RAG-based enterprise chatbot for architecture document querying.</div>
-						</div>
-					</div>
-				</a>
+		<div class="proj-container">
+			<div class="project">
+				<div class="project-image">
+					<img src="images/ocr.jpg">
+				</div>
+				<div class="caption">
+					OCR Pipeline
+					<div class="description">Document intelligence system.</div>
+				</div>
 			</div>
-
-			<div class="proj-container">
-				<a href="#">
-					<div class="project">
-						<div class="project-image">
-							<img src="images/graph.jpg">
-						</div>
-						<div class="caption">
-							Knowledge Graph System
-							<div class="description">Neo4j-based graph reasoning system integrated with LLMs.</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="proj-container">
-				<a href="#">
-					<div class="project">
-						<div class="project-image">
-							<img src="images/ocr.jpg">
-						</div>
-						<div class="caption">
-							OCR Pipeline
-							<div class="description">Document intelligence system for structured data extraction.</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-		</div>
-
-		<div class="projects-row">
-
-			<div class="proj-container">
-				<a href="#">
-					<div class="project">
-						<div class="project-image">
-							<img src="images/agent.jpg">
-						</div>
-						<div class="caption">
-							Agentic Analytics
-							<div class="description">Natural language analytics system for Excel data.</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
-			<div class="proj-container">
-				<a href="#">
-					<div class="project">
-						<div class="project-image">
-							<img src="images/cad.jpg">
-						</div>
-						<div class="caption">
-							2D to 3D CAD
-							<div class="description">AI-based engineering drawing conversion pipeline.</div>
-						</div>
-					</div>
-				</a>
-			</div>
-
 		</div>
 
 	</div>
 
-	<!-- CONTACT -->
-	<div id="contact">
+</div>
 
-		<div id="contact-heading"> Contact </div>
+<div id="contact">
 
-		<div id="email">
-			Email: ashitabheemappa@gmail.com
-		</div>
+	<div id="contact-heading"> Contact </div>
 
-		<div id="get-in-touch">
-			Get in touch
-		</div>
-
-		<a href="https://www.linkedin.com/in/ashita-b-73509b1a7/" target="_blank">
-			<i class="devicon-linkedin-plain social-media"></i>
-		</a>
-
-		<a href="https://github.com/" target="_blank">
-			<i class="devicon-github-plain social-media"></i>
-		</a>
-
-		<div id="copyright">&copy; Ashita B</div>
-
+	<div id="email">
+		ashitabheemappa@gmail.com
 	</div>
 
-	<script type="text/javascript" src="js/nav.js"></script>
-	<script type="text/javascript" src="js/menu.js"></script>
-	<script type="text/javascript" src="js/about.js"></script>
-	<script type="text/javascript" src="js/skills.js"></script>
-	<script type="text/javascript" src="js/projects.js"></script>
+	<div id="get-in-touch"> Get in touch </div>
+
+	<a href="https://www.linkedin.com/in/ashita-b-73509b1a7/" target="_blank">
+		<i class="devicon-linkedin-plain social-media"></i>
+	</a>
+
+	<a href="https://github.com/" target="_blank">
+		<i class="devicon-github-plain social-media"></i>
+	</a>
+
+	<div id="copyright">© Ashita B</div>
+
+</div>
+
+<script src="js/nav.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/about.js"></script>
+<script src="js/skills.js"></script>
+<script src="js/projects.js"></script>
 
 </body>
 </html>
