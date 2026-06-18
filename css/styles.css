@@ -132,7 +132,7 @@ nav hr{
 	position: fixed;
 	right: 0;
 	z-index: 1;
-	background-color: #56b9b8;
+	background-color: #6c5ce7;
 	border-radius: 0px 0px 0px 100%;
 	animation-name: slide-in;
 	animation-duration: 500ms;
@@ -209,7 +209,7 @@ nav hr{
 #container hr{
 	clear: both;
 	height: 3px;
-	background-color: #56b9b8;
+	background-color: #6c5ce7;
 	border-style: none;
 }
 .tabs{
@@ -229,8 +229,8 @@ nav hr{
 	cursor: pointer;
 }
 .activeTab{
-	background-color: #56b9b8;
-	border:1px solid #56b9b8;
+	background-color: #6c5ce7;
+	border:1px solid #6c5ce7;
 	border-bottom: none;
 	color: #ffffff;
 }
@@ -328,7 +328,7 @@ nav hr{
 	margin-bottom: 20px;
 }
 .skill{
-	background-color: #56b9b8; 
+	background-color: #6c5ce7; 
 	font-size: 120%;
 	width: 200px;
 	height: 130px;
@@ -407,7 +407,7 @@ nav hr{
 
 /*--------------------contact------------------------*/
 #contact{
-	background-color: #56b9b8;
+	background-color: #6c5ce7;
 	color: #ffffff;
 	padding-top: 50px;
 	padding-bottom: 10px;
