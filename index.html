@@ -1,435 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashita B | Applied AI Engineer</title>
+    <title>Ashita B</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
 
-<style>
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            scroll-behavior:smooth;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-font-family:'Poppins',sans-serif;
-}
+        nav{
+            position:fixed;
+            width:100%;
+            background:white;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+            z-index:1000;
+        }
 
-body{
-background:#0f172a;
-color:white;
-}
+        nav ul{
+            display:flex;
+            justify-content:center;
+            list-style:none;
+            margin:0;
+            padding:15px;
+        }
 
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(15,23,42,0.95);
-backdrop-filter:blur(10px);
-display:flex;
-justify-content:center;
-padding:20px;
-z-index:1000;
-}
+        nav ul a{
+            text-decoration:none;
+            color:black;
+            margin:0 20px;
+            font-weight:bold;
+        }
 
-nav a{
-color:white;
-text-decoration:none;
-margin:0 20px;
-font-weight:500;
-}
+        nav ul a:hover{
+            color:#0077ff;
+        }
 
-nav a:hover{
-color:#38bdf8;
-}
+        /* HOME */
+        #home{
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            background:#f5f7fb;
+        }
 
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
+        .logo{
+            width:120px;
+            height:120px;
+            border-radius:50%;
+            background:#0077ff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            font-size:40px;
+            font-weight:bold;
+            margin-bottom:20px;
+        }
 
-.logo{
-width:150px;
-height:150px;
-border-radius:50%;
-background:linear-gradient(135deg,#38bdf8,#2563eb);
-display:flex;
-justify-content:center;
-align-items:center;
-font-size:4rem;
-font-weight:bold;
-margin-bottom:30px;
-box-shadow:0 0 40px rgba(56,189,248,.4);
-}
+        #name{
+            font-size:40px;
+            font-weight:bold;
+        }
 
-.hero h1{
-font-size:4rem;
-}
+        #home span{
+            margin-top:10px;
+            color:gray;
+        }
 
-.hero h2{
-color:#38bdf8;
-margin-top:10px;
-font-weight:500;
-}
+        /* SECTION COMMON */
+        section{
+            padding:80px 15%;
+        }
 
-.hero p{
-max-width:800px;
-margin-top:20px;
-color:#cbd5e1;
-}
+        .title{
+            font-size:30px;
+            font-weight:bold;
+            text-align:center;
+            margin-bottom:40px;
+        }
 
-.btn{
-margin-top:30px;
-padding:12px 30px;
-border-radius:30px;
-background:#38bdf8;
-color:black;
-text-decoration:none;
-font-weight:600;
-}
+        /* ABOUT */
+        #about{
+            background:white;
+        }
 
-.section{
-padding:100px 10%;
-}
+        #about-box{
+            max-width:800px;
+            margin:auto;
+            text-align:center;
+            color:#444;
+        }
 
-.section-title{
-font-size:2.5rem;
-margin-bottom:40px;
-text-align:center;
-}
+        /* SKILLS */
+        #skills{
+            background:#f5f7fb;
+        }
 
-.about{
-text-align:center;
-max-width:900px;
-margin:auto;
-color:#cbd5e1;
-}
+        .skill-group{
+            margin-bottom:30px;
+        }
 
-.timeline{
-position:relative;
-max-width:900px;
-margin:auto;
-}
+        .skill-title{
+            font-weight:bold;
+            margin-bottom:10px;
+        }
 
-.timeline-item{
-background:#1e293b;
-padding:25px;
-margin-bottom:25px;
-border-left:4px solid #38bdf8;
-border-radius:10px;
-}
+        .skills{
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+        }
 
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
-}
+        .skill{
+            background:white;
+            padding:10px 15px;
+            border-radius:20px;
+            box-shadow:0 2px 5px rgba(0,0,0,0.1);
+        }
 
-.project-card{
-background:#1e293b;
-padding:25px;
-border-radius:15px;
-transition:.3s;
-}
+        /* PROJECTS */
+        #projects{
+            background:white;
+        }
 
-.project-card:hover{
-transform:translateY(-8px);
-}
+        .project-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
 
-.project-card h3{
-color:#38bdf8;
-margin-bottom:15px;
-}
+        .project{
+            border:1px solid #eee;
+            padding:15px;
+            border-radius:10px;
+            transition:0.3s;
+        }
 
-.skills{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
+        .project:hover{
+            transform:scale(1.03);
+        }
 
-.skill{
-background:#1e293b;
-padding:12px 20px;
-border-radius:30px;
-border:1px solid #38bdf8;
-}
+        .project h3{
+            margin:10px 0;
+        }
 
-.education{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
+        /* CONTACT */
+        #contact{
+            background:#f5f7fb;
+            text-align:center;
+        }
 
-.edu-card{
-background:#1e293b;
-padding:25px;
-border-radius:15px;
-text-align:center;
-}
+        .social a{
+            margin:10px;
+            text-decoration:none;
+            font-size:20px;
+            color:black;
+        }
 
-.contact{
-text-align:center;
-}
+        .social a:hover{
+            color:#0077ff;
+        }
 
-.contact a{
-color:#38bdf8;
-display:block;
-margin:10px;
-text-decoration:none;
-}
-
-footer{
-padding:30px;
-text-align:center;
-background:#020617;
-margin-top:50px;
-}
-
-.typing{
-color:#38bdf8;
-font-weight:600;
-}
-
-</style>
+    </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#education">Education</a>
-<a href="#contact">Contact</a>
+    <ul>
+        <a href="#home"><li>HOME</li></a>
+        <a href="#about"><li>ABOUT</li></a>
+        <a href="#skills"><li>SKILLS</li></a>
+        <a href="#projects"><li>PROJECTS</li></a>
+        <a href="#contact"><li>CONTACT</li></a>
+    </ul>
 </nav>
 
-<section class="hero">
+<!-- HOME -->
+<div id="home">
+    <div class="logo">AB</div>
 
-<div class="logo">
-AB
+    <div id="name">Ashita B</div>
+
+    <span>
+        Applied AI Engineer | Generative AI | RAG | Agentic AI | Knowledge Graphs
+    </span>
 </div>
 
-<h1>Ashita B</h1>
+<!-- ABOUT -->
+<section id="about">
+    <div class="title">ABOUT ME</div>
 
-<h2 class="typing"></h2>
+    <div id="about-box">
+        I am Ashita B, an Applied AI Engineer at Tata Elxsi working on Generative AI,
+        RAG systems, Agentic workflows, Knowledge Graphs, OCR pipelines, and enterprise AI solutions.
 
-<p>
-Applied AI Engineer specializing in Generative AI, RAG Systems,
-Agentic Workflows, Knowledge Graphs and Machine Learning solutions.
-Currently working at Tata Elxsi building enterprise AI applications.
-</p>
+        <br><br>
 
-<a class="btn" href="https://www.linkedin.com/in/ashita-b-73509b1a7/" target="_blank">
-Connect on LinkedIn
-</a>
+        I am also pursuing IIT Madras BS Degree in Data Science and an MBA from IGNOU.
+        I enjoy building real-world AI systems that solve enterprise problems.
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="title">SKILLS</div>
+
+    <div class="skill-group">
+        <div class="skill-title">Programming</div>
+        <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">C</div>
+            <div class="skill">C++</div>
+            <div class="skill">SQL</div>
+        </div>
+    </div>
+
+    <div class="skill-group">
+        <div class="skill-title">AI / ML</div>
+        <div class="skills">
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Deep Learning</div>
+            <div class="skill">Generative AI</div>
+            <div class="skill">RAG</div>
+            <div class="skill">Agentic AI</div>
+        </div>
+    </div>
+
+    <div class="skill-group">
+        <div class="skill-title">Tools</div>
+        <div class="skills">
+            <div class="skill">Neo4j</div>
+            <div class="skill">OCR</div>
+            <div class="skill">Pandas</div>
+            <div class="skill">NumPy</div>
+            <div class="skill">Git</div>
+        </div>
+    </div>
 
 </section>
 
-<section id="about" class="section">
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="title">PROJECTS</div>
 
-<h2 class="section-title">About Me</h2>
+    <div class="project-grid">
 
-<div class="about">
-I am an Applied AI Engineer with experience in Generative AI,
-Retrieval Augmented Generation (RAG), Agentic AI Systems,
-Knowledge Graphs, OCR Pipelines and Enterprise AI Solutions.
+        <div class="project">
+            <h3>Design Assist Chatbot</h3>
+            <p>RAG-based chatbot for enterprise document querying.</p>
+        </div>
 
-Alongside my professional work at Tata Elxsi, I am pursuing
-the IIT Madras BS Degree in Data Science and Applications
-and an MBA from IGNOU.
-</div>
+        <div class="project">
+            <h3>Knowledge Graph System</h3>
+            <p>Neo4j graph-based reasoning system integrated with LLMs.</p>
+        </div>
 
+        <div class="project">
+            <h3>Agentic Analytics</h3>
+            <p>Excel-based natural language analytics system.</p>
+        </div>
+
+        <div class="project">
+            <h3>OCR Document Intelligence</h3>
+            <p>Structured extraction from engineering documents.</p>
+        </div>
+
+        <div class="project">
+            <h3>Bloom Energy RAG</h3>
+            <p>Enterprise-scale retrieval system for multi-source data.</p>
+        </div>
+
+        <div class="project">
+            <h3>2D to 3D CAD Conversion</h3>
+            <p>AI workflow for engineering design transformation.</p>
+        </div>
+
+    </div>
 </section>
 
-<section id="experience" class="section">
+<!-- CONTACT -->
+<section id="contact">
+    <div class="title">CONTACT</div>
 
-<h2 class="section-title">Experience</h2>
+    <p>Email: ashitabheemappa@gmail.com</p>
 
-<div class="timeline">
-
-<div class="timeline-item">
-<h3>Tata Elxsi — Engineer</h3>
-<p>Oct 2023 - Present</p>
-<br>
-<ul>
-<li>Built Design Assist Chatbot using RAG and Agentic AI.</li>
-<li>Developed Neo4j Knowledge Graph integration.</li>
-<li>Implemented Enterprise Guardrails Framework.</li>
-<li>Built Excel-based Agentic Analytics System.</li>
-<li>Worked on OCR-based Document Intelligence solutions.</li>
-<li>Contributed to Bloom Energy Agentic RAG initiatives.</li>
-<li>Working on AI-assisted 2D to 3D CAD conversion.</li>
-</ul>
-</div>
-
-</div>
-
+    <div class="social">
+        <a href="https://www.linkedin.com/in/ashita-b-73509b1a7/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/" target="_blank">GitHub</a>
+    </div>
 </section>
-
-<section id="projects" class="section">
-
-<h2 class="section-title">Featured Projects</h2>
-
-<div class="projects">
-
-<div class="project-card">
-<h3>Design Assist Chatbot</h3>
-<p>Enterprise RAG chatbot for querying architecture and engineering documents.</p>
-</div>
-
-<div class="project-card">
-<h3>Knowledge Graph System</h3>
-<p>Neo4j-based graph reasoning integrated with chatbot workflows.</p>
-</div>
-
-<div class="project-card">
-<h3>Agentic Analytics</h3>
-<p>Natural language analytics over Excel datasets.</p>
-</div>
-
-<div class="project-card">
-<h3>OCR Document Intelligence</h3>
-<p>Structured extraction from engineering task cards and documents.</p>
-</div>
-
-<div class="project-card">
-<h3>Bloom Energy RAG</h3>
-<p>Enterprise retrieval architecture for large-scale document systems.</p>
-</div>
-
-<div class="project-card">
-<h3>2D to 3D CAD Conversion</h3>
-<p>AI-powered workflow for engineering drawing transformation.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="skills" class="section">
-
-<h2 class="section-title">Skills</h2>
-
-<div class="skills">
-
-<div class="skill">Python</div>
-<div class="skill">Machine Learning</div>
-<div class="skill">Deep Learning</div>
-<div class="skill">Generative AI</div>
-<div class="skill">RAG</div>
-<div class="skill">Agentic AI</div>
-<div class="skill">Neo4j</div>
-<div class="skill">Knowledge Graphs</div>
-<div class="skill">OCR</div>
-<div class="skill">SQL</div>
-<div class="skill">Pandas</div>
-<div class="skill">NumPy</div>
-<div class="skill">Git</div>
-
-</div>
-
-</section>
-
-<section id="education" class="section">
-
-<h2 class="section-title">Education</h2>
-
-<div class="education">
-
-<div class="edu-card">
-<h3>BE Computer Science</h3>
-<p>SDMCET</p>
-<p>CGPA: 9.41</p>
-</div>
-
-<div class="edu-card">
-<h3>IIT Madras BS</h3>
-<p>Data Science & Applications</p>
-</div>
-
-<div class="edu-card">
-<h3>IGNOU MBA</h3>
-<p>Ongoing</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="contact" class="section contact">
-
-<h2 class="section-title">Contact</h2>
-
-<p>Email: ashitabheemappa@gmail.com</p>
-
-<a href="https://www.linkedin.com/in/ashita-b-73509b1a7/" target="_blank">
-LinkedIn Profile
-</a>
-
-</section>
-
-<footer>
-© 2026 Ashita B | Applied AI Engineer
-</footer>
-
-<script>
-
-const words = [
-"Applied AI Engineer",
-"Generative AI Developer",
-"RAG Systems Engineer",
-"Agentic AI Builder"
-];
-
-let i = 0;
-let j = 0;
-let current = "";
-let isDeleting = false;
-
-function type() {
-
-const element = document.querySelector(".typing");
-
-if(i < words.length){
-
-if(!isDeleting && j <= words[i].length){
-current = words[i].substring(0,j++);
-element.innerHTML = current;
-}
-
-if(isDeleting && j >= 0){
-current = words[i].substring(0,j--);
-element.innerHTML = current;
-}
-
-if(j === words[i].length){
-isDeleting = true;
-}
-
-if(isDeleting && j < 0){
-isDeleting = false;
-i++;
-if(i===words.length){
-i=0;
-}
-}
-}
-
-setTimeout(type,100);
-}
-
-type();
-
-</script>
 
 </body>
 </html>
