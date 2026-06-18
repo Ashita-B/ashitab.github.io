@@ -4,39 +4,33 @@
     <title>Ashita B</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css">
-
     <style>
         body{
             margin:0;
-            font-family: Arial, sans-serif;
+            font-family: Arial;
             scroll-behavior:smooth;
+            background:#f4f6f9;
         }
 
+        /* NAV */
         nav{
             position:fixed;
             width:100%;
             background:white;
-            box-shadow:0 2px 10px rgba(0,0,0,0.1);
-            z-index:1000;
-        }
-
-        nav ul{
             display:flex;
             justify-content:center;
-            list-style:none;
-            margin:0;
-            padding:15px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+            z-index:999;
         }
 
-        nav ul a{
+        nav a{
+            padding:15px 20px;
             text-decoration:none;
-            color:black;
-            margin:0 20px;
+            color:#333;
             font-weight:bold;
         }
 
-        nav ul a:hover{
+        nav a:hover{
             color:#0077ff;
         }
 
@@ -47,125 +41,131 @@
             flex-direction:column;
             justify-content:center;
             align-items:center;
+            background:linear-gradient(135deg,#e8f0ff,#ffffff);
             text-align:center;
-            background:#f5f7fb;
         }
 
-        .logo{
+        .avatar{
             width:120px;
             height:120px;
             border-radius:50%;
             background:#0077ff;
             display:flex;
-            align-items:center;
             justify-content:center;
-            color:white;
+            align-items:center;
             font-size:40px;
+            color:white;
             font-weight:bold;
             margin-bottom:20px;
+            box-shadow:0 10px 20px rgba(0,0,0,0.15);
         }
 
-        #name{
+        #home h1{
+            margin:0;
             font-size:40px;
-            font-weight:bold;
         }
 
         #home span{
-            margin-top:10px;
             color:gray;
+            margin-top:10px;
         }
 
-        /* SECTION COMMON */
+        /* SECTION */
         section{
             padding:80px 15%;
         }
 
         .title{
-            font-size:30px;
-            font-weight:bold;
             text-align:center;
+            font-size:28px;
             margin-bottom:40px;
+            font-weight:bold;
         }
 
-        /* ABOUT */
-        #about{
+        /* ABOUT BOX */
+        .card{
             background:white;
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.08);
         }
 
-        #about-box{
-            max-width:800px;
-            margin:auto;
-            text-align:center;
-            color:#444;
+        /* TABS */
+        .tabs{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            margin-bottom:20px;
+        }
+
+        .tab{
+            padding:10px 20px;
+            cursor:pointer;
+            border-radius:20px;
+            background:#eee;
+        }
+
+        .tab.active{
+            background:#0077ff;
+            color:white;
         }
 
         /* SKILLS */
-        #skills{
-            background:#f5f7fb;
-        }
-
-        .skill-group{
-            margin-bottom:30px;
-        }
-
-        .skill-title{
-            font-weight:bold;
-            margin-bottom:10px;
-        }
-
-        .skills{
-            display:flex;
-            flex-wrap:wrap;
-            gap:10px;
-        }
-
         .skill{
-            background:white;
-            padding:10px 15px;
+            margin-bottom:15px;
+        }
+
+        .bar{
+            width:100%;
+            background:#eee;
             border-radius:20px;
-            box-shadow:0 2px 5px rgba(0,0,0,0.1);
+            overflow:hidden;
+        }
+
+        .fill{
+            height:10px;
+            background:#0077ff;
+        }
+
+        /* EXPERIENCE */
+        .exp-card{
+            background:white;
+            padding:20px;
+            border-left:5px solid #0077ff;
+            margin-bottom:20px;
+            border-radius:10px;
+            box-shadow:0 5px 10px rgba(0,0,0,0.05);
         }
 
         /* PROJECTS */
-        #projects{
-            background:white;
-        }
-
-        .project-grid{
+        .grid{
             display:grid;
             grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
             gap:20px;
         }
 
         .project{
-            border:1px solid #eee;
-            padding:15px;
+            background:white;
+            padding:20px;
             border-radius:10px;
             transition:0.3s;
+            box-shadow:0 5px 10px rgba(0,0,0,0.05);
         }
 
         .project:hover{
-            transform:scale(1.03);
+            transform:translateY(-5px);
         }
 
         .project h3{
-            margin:10px 0;
+            color:#0077ff;
         }
 
         /* CONTACT */
         #contact{
-            background:#f5f7fb;
             text-align:center;
         }
 
-        .social a{
-            margin:10px;
-            text-decoration:none;
-            font-size:20px;
-            color:black;
-        }
-
-        .social a:hover{
+        a{
             color:#0077ff;
         }
 
@@ -176,38 +176,49 @@
 
 <!-- NAV -->
 <nav>
-    <ul>
-        <a href="#home"><li>HOME</li></a>
-        <a href="#about"><li>ABOUT</li></a>
-        <a href="#skills"><li>SKILLS</li></a>
-        <a href="#projects"><li>PROJECTS</li></a>
-        <a href="#contact"><li>CONTACT</li></a>
-    </ul>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#experience">EXPERIENCE</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#projects">PROJECTS</a>
+    <a href="#contact">CONTACT</a>
 </nav>
 
 <!-- HOME -->
-<div id="home">
-    <div class="logo">AB</div>
-
-    <div id="name">Ashita B</div>
-
-    <span>
-        Applied AI Engineer | Generative AI | RAG | Agentic AI | Knowledge Graphs
-    </span>
-</div>
+<section id="home">
+    <div class="avatar">AB</div>
+    <h1>Ashita B</h1>
+    <span>Applied AI Engineer | GenAI | RAG | Agentic AI | Knowledge Graphs</span>
+</section>
 
 <!-- ABOUT -->
 <section id="about">
     <div class="title">ABOUT ME</div>
 
-    <div id="about-box">
-        I am Ashita B, an Applied AI Engineer at Tata Elxsi working on Generative AI,
-        RAG systems, Agentic workflows, Knowledge Graphs, OCR pipelines, and enterprise AI solutions.
+    <div class="tabs">
+        <div class="tab active" onclick="showTab('about')">ABOUT</div>
+        <div class="tab" onclick="showTab('edu')">EDUCATION</div>
+    </div>
 
-        <br><br>
+    <div class="card" id="about-box">
+        I am an Applied AI Engineer at Tata Elxsi working on Generative AI,
+        RAG systems, Agentic workflows, Knowledge Graphs, OCR pipelines and enterprise AI solutions.
+    </div>
+</section>
 
-        I am also pursuing IIT Madras BS Degree in Data Science and an MBA from IGNOU.
-        I enjoy building real-world AI systems that solve enterprise problems.
+<!-- EXPERIENCE -->
+<section id="experience">
+    <div class="title">EXPERIENCE</div>
+
+    <div class="exp-card">
+        <b>Tata Elxsi — Engineer</b><br><br>
+        • Design Assist Chatbot (RAG + LLM)<br>
+        • Knowledge Graph System (Neo4j)<br>
+        • Guardrails Framework<br>
+        • Agentic Analytics System<br>
+        • OCR Document Intelligence<br>
+        • Bloom Energy RAG<br>
+        • 2D → 3D CAD Workflow
     </div>
 </section>
 
@@ -215,74 +226,55 @@
 <section id="skills">
     <div class="title">SKILLS</div>
 
-    <div class="skill-group">
-        <div class="skill-title">Programming</div>
-        <div class="skills">
-            <div class="skill">Python</div>
-            <div class="skill">C</div>
-            <div class="skill">C++</div>
-            <div class="skill">SQL</div>
-        </div>
+    <div class="skill">Python
+        <div class="bar"><div class="fill" style="width:90%"></div></div>
     </div>
 
-    <div class="skill-group">
-        <div class="skill-title">AI / ML</div>
-        <div class="skills">
-            <div class="skill">Machine Learning</div>
-            <div class="skill">Deep Learning</div>
-            <div class="skill">Generative AI</div>
-            <div class="skill">RAG</div>
-            <div class="skill">Agentic AI</div>
-        </div>
+    <div class="skill">Machine Learning
+        <div class="bar"><div class="fill" style="width:85%"></div></div>
     </div>
 
-    <div class="skill-group">
-        <div class="skill-title">Tools</div>
-        <div class="skills">
-            <div class="skill">Neo4j</div>
-            <div class="skill">OCR</div>
-            <div class="skill">Pandas</div>
-            <div class="skill">NumPy</div>
-            <div class="skill">Git</div>
-        </div>
+    <div class="skill">Generative AI
+        <div class="bar"><div class="fill" style="width:90%"></div></div>
     </div>
 
+    <div class="skill">RAG Systems
+        <div class="bar"><div class="fill" style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">Agentic AI
+        <div class="bar"><div class="fill" style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">Neo4j
+        <div class="bar"><div class="fill" style="width:80%"></div></div>
+    </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
     <div class="title">PROJECTS</div>
 
-    <div class="project-grid">
+    <div class="grid">
 
         <div class="project">
             <h3>Design Assist Chatbot</h3>
-            <p>RAG-based chatbot for enterprise document querying.</p>
+            <p>RAG-based enterprise chatbot for document understanding.</p>
         </div>
 
         <div class="project">
-            <h3>Knowledge Graph System</h3>
-            <p>Neo4j graph-based reasoning system integrated with LLMs.</p>
+            <h3>Knowledge Graph</h3>
+            <p>Neo4j-based reasoning system for enterprise data.</p>
         </div>
 
         <div class="project">
             <h3>Agentic Analytics</h3>
-            <p>Excel-based natural language analytics system.</p>
+            <p>Natural language Excel analytics system.</p>
         </div>
 
         <div class="project">
-            <h3>OCR Document Intelligence</h3>
-            <p>Structured extraction from engineering documents.</p>
-        </div>
-
-        <div class="project">
-            <h3>Bloom Energy RAG</h3>
-            <p>Enterprise-scale retrieval system for multi-source data.</p>
-        </div>
-
-        <div class="project">
-            <h3>2D to 3D CAD Conversion</h3>
-            <p>AI workflow for engineering design transformation.</p>
+            <h3>OCR System</h3>
+            <p>Document extraction pipeline for task cards.</p>
         </div>
 
     </div>
@@ -293,12 +285,33 @@
     <div class="title">CONTACT</div>
 
     <p>Email: ashitabheemappa@gmail.com</p>
-
-    <div class="social">
-        <a href="https://www.linkedin.com/in/ashita-b-73509b1a7/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/" target="_blank">GitHub</a>
-    </div>
+    <p>
+        <a href="https://www.linkedin.com/in/ashita-b-73509b1a7/" target="_blank">
+            LinkedIn
+        </a>
+    </p>
 </section>
+
+<script>
+function showTab(tab){
+    const box = document.getElementById("about-box");
+
+    if(tab === "about"){
+        box.innerHTML = `
+        I am an Applied AI Engineer at Tata Elxsi working on Generative AI,
+        RAG systems, Agentic workflows, Knowledge Graphs, OCR pipelines and enterprise AI solutions.
+        `;
+    }
+    else{
+        box.innerHTML = `
+        <b>Education</b><br><br>
+        BE CSE - SDMCET (CGPA 9.41)<br>
+        IIT Madras BS - Data Science (Ongoing)<br>
+        MBA - IGNOU (Ongoing)
+        `;
+    }
+}
+</script>
 
 </body>
 </html>
